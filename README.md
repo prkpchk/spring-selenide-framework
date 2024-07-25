@@ -9,7 +9,7 @@ The goal of this project is to create a framework for autotests that supports mo
 ----
 
 ### Run tests
-#### You can run tests simply debugging each one from IntelliJ IDEA(from test class) or using following maven commands:
+#### You can run tests simply debugging each one from IDE or using following maven commands:
 - to run XML suite(resources/suites) using suite path(or few separated with ",") in command:
 >mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/RegressionSuite.xml
 - to run test class using class name(or few separated with ",") in command:
