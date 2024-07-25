@@ -1,4 +1,4 @@
-package github.helpers;
+package base.helpers;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package github.helpers;
+package base.helpers;
 
-import github.SpringSelenideFrameworkApplication;
+import base.SpringSelenideFrameworkApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 

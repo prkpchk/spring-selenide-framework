@@ -1,10 +1,7 @@
 package junit;
 
-import github.SpringSelenideFrameworkApplication;
-import github.pages.GitHubRepositoryPage;
+import base.SpringSelenideFrameworkApplication;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.boot.test.context.SpringBootTest;
 

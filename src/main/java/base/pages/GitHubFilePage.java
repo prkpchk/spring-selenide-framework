@@ -1,4 +1,4 @@
-package github.pages;
+package base.pages;
 
 public class GitHubFilePage {
 }

@@ -5,7 +5,7 @@
 
     <test name="Test example">
         <classes>
-            <class name="github.SampleTest"/>
+            <class name="ui.SampleTest"/>
         </classes>
     </test>
 

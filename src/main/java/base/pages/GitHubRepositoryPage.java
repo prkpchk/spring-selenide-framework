@@ -1,4 +1,4 @@
-package github.pages;
+package base.pages;
 
 import com.codeborne.selenide.Selenide;
 import org.springframework.stereotype.Component;
