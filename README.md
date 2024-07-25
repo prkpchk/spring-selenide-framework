@@ -7,13 +7,13 @@
 The goal of this project is to create a framework for autotests that supports mobile and web testing, API testing and parallel tests execution using the capabilities of Spring Boot
 
 ----
+### - [1. How to run tests](#1-how-to-run-tests)
+### - [2. Allure reports](#2-allure-reports)
+### - [3. Test annotations](#3-test-annotations)
+### - [4. Environment variables](#4-environment-variables)
+### - [5. Selenium Grid Setup](#5-selenium-grid-setup)
 
-<h3>[1. How to run tests](#1-how-to-run-tests)</h3>
-<h3>[2. Allure reports](#2-allure-reports)</h3>
-<h3>[3. Test annotations](#3-test-annotations)</h3>
-<h3>[4. Environment variables](#4-environment-variables)</h3>
-<h3>[5. Selenium Grid Setup](#5-selenium-grid-setup)</h3>
-
+----
 ### 1. How to run Tests
 #### You can run tests simply debugging each one from IDE or using following maven commands:
 - to run XML suite(resources/suites) using suite path(or few separated with ",") in command:
