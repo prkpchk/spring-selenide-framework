@@ -8,7 +8,13 @@ The goal of this project is to create a framework for autotests that supports mo
 
 ----
 
-### Run tests
+### 1. [How to run tests](#how-to-run-tests)
+### 2. [Allure reports](#allure-reports)
+### 3. [Test annotations](#test-annotations)
+### 4. [Environment variables](#environment-variables)
+### 5. [Selenium Grid Setup](#selenium-grid-setup)
+
+### 1. How to run Tests
 #### You can run tests simply debugging each one from IDE or using following maven commands:
 - to run XML suite(resources/suites) using suite path(or few separated with ",") in command:
 >mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/RegressionSuite.xml
@@ -17,7 +23,9 @@ The goal of this project is to create a framework for autotests that supports mo
 - to run one test(or few separated with ",") in command:
 >mvn test -Dtest=SampleTest#SampleTest2
 
-### Allure reports
+----
+
+### 2. Allure reports
 #### To see Allure results use following commands
 - Opens new browser tab with results in default browser:
 >mvn allure:serve -pl spring-selenide-framework
@@ -26,12 +34,16 @@ The goal of this project is to create a framework for autotests that supports mo
 
 >mvn allure:report -pl spring-selenide-framework
 
-### Test annotations
+----
+
+### 3. Test annotations
 - @Test(description = "Test name") - description parameter is test name in Allure reports and case name in TestRail
 - @AllureId("id") - id of test case in TestRail
 - @Links({"ID-1", "ID-2"}) - defects for test case in Jira
 
-### Environment variables
+----
+
+### 4. Environment variables
 
 Some tests need environment variables to be set.
 Here is list of environment variables with definitions:
@@ -42,7 +54,9 @@ Here is list of environment variables with definitions:
 | BROWSER               |                  -                   |                    chrome(by default) or firefox                     |
 | ENV                   |               Required               |                       development, integration                       |
 
-### Selenium grid setup:
+----
+
+### 5. Selenium grid setup:
 
 1. From project root execute following command to create docker network:
 >docker network create grid
