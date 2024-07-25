@@ -11,11 +11,11 @@ The goal of this project is to create a framework for autotests that supports mo
 ### Run tests
 #### You can run tests simply debugging each one from IntelliJ IDEA(from test class) or using following maven commands:
 - to run XML suite(resources/suites) using suite path(or few separated with ",") in command:
->mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/RegressionSuite.xml -pl spring-selenide-framework
+>mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/RegressionSuite.xml
 - to run test class using class name(or few separated with ",") in command:
->mvn test -Dtest=SampleTest -pl spring-selenide-framework
+>mvn test -Dtest=SampleTest
 - to run one test(or few separated with ",") in command:
->mvn test -Dtest=SampleTest#SampleTest2 -pl spring-selenide-framework
+>mvn test -Dtest=SampleTest#SampleTest2
 
 ### Allure reports
 #### To see Allure results use following commands
