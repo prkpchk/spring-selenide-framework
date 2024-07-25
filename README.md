@@ -8,7 +8,7 @@ The goal of this project is to create a framework for autotests that supports mo
 
 ----
 
-### 1. [How to run tests](#how-to-run-tests)
+### 1. [How to run tests](#How to run Tests)
 ### 2. [Allure reports](#allure-reports)
 ### 3. [Test annotations](#test-annotations)
 ### 4. [Environment variables](#environment-variables)
