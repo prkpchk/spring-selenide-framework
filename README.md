@@ -17,22 +17,37 @@ The goal of this project is to create a framework for autotests that supports mo
 ### 1. How to run Tests
 #### You can run tests simply debugging each one from IDE or using following maven commands:
 - to run XML suite(resources/suites) using suite path(or few separated with ",") in command:
->mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/RegressionSuite.xml
+```bash
+mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/RegressionSuite.xml
+```
+
 - to run test class using class name(or few separated with ",") in command:
->mvn test -Dtest=SampleTest
+
+```bash
+mvn test -Dtest=SampleTest
+```
+
 - to run one test(or few separated with ",") in command:
->mvn test -Dtest=SampleTest#SampleTest2
+
+```bash
+mvn test -Dtest=SampleTest#SampleTest2
+```
 
 ----
 
 ### 2. Allure reports
 #### To see Allure results use following commands
 - Opens new browser tab with results in default browser:
->mvn allure:serve -pl spring-selenide-framework
+
+```bash
+mvn allure:serve -pl spring-selenide-framework
+```
 
 - Generates allure report in "target" folder:
 
->mvn allure:report -pl spring-selenide-framework
+```bash
+mvn allure:report -pl spring-selenide-framework
+```
 
 ----
 
@@ -59,29 +74,35 @@ Here is list of environment variables with definitions:
 ### 5. Selenium grid setup:
 
 1. From project root execute following command to create docker network:
->docker network create grid
+```bash
+docker network create grid
+```
 
 to remove:
-> docker network rm grid
+```bash
+docker network rm grid
+```
 
 2. Run selenium hub (image will be pulled automatically if it doesn't exist):
 
->docker run -d -p 4442-4444:4442-4444 --net grid --name selenium-hub selenium/hub:latest
+```bash
+docker run -d -p 4442-4444:4442-4444 --net grid --name selenium-hub selenium/hub:latest
+```
 
 After that you can find your selenium grid instance on http://localhost:4444/ui
 
 3. Run any browser on created hub with following commands :
 - chrome
 ```bash
-   docker run -d --net grid -e SE_NODE_MAX_SESSIONS=5 -e SE_NODE_SESSION_TIMEOUT=60 -e SE_EVENT_BUS_HOST=selenium-hub --shm-size="2g" -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-chrome:latest
+docker run -d --net grid -e SE_NODE_MAX_SESSIONS=5 -e SE_NODE_SESSION_TIMEOUT=60 -e SE_EVENT_BUS_HOST=selenium-hub --shm-size="2g" -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-chrome:latest
 ```
 - firefox
 ```bash
-   docker run -d --net grid -e SE_NODE_MAX_SESSIONS=5 -e SE_NODE_SESSION_TIMEOUT=60 -e SE_EVENT_BUS_HOST=selenium-hub --shm-size="2g" -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-firefox:latest
+docker run -d --net grid -e SE_NODE_MAX_SESSIONS=5 -e SE_NODE_SESSION_TIMEOUT=60 -e SE_EVENT_BUS_HOST=selenium-hub --shm-size="2g" -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-firefox:latest
 ```
 - edge
 ```bash
-   docker run -d --net grid -e SE_NODE_MAX_SESSIONS=5 -e SE_NODE_SESSION_TIMEOUT=60 -e SE_EVENT_BUS_HOST=selenium-hub --shm-size="2g" -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-edge:latest
+docker run -d --net grid -e SE_NODE_MAX_SESSIONS=5 -e SE_NODE_SESSION_TIMEOUT=60 -e SE_EVENT_BUS_HOST=selenium-hub --shm-size="2g" -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-edge:latest
 ```
 
 
