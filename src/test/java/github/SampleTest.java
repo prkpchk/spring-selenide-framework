@@ -5,7 +5,7 @@ import github.pages.GitHubRepositoryPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
-public class SearchTestngTest extends BaseTest {
+public class SampleTest extends BaseTest {
 
     @Autowired
     private GitHubRepositoryPage gitHubRepositoryPage;
