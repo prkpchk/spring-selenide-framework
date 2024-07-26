@@ -1,17 +1,23 @@
 package base.pages;
 
 import com.codeborne.selenide.Selenide;
-import org.springframework.stereotype.Component;
 
-@Component
-public class GitHubRepositoryPage {
+@Page
+public class GitHubRepositoryPage{
+
+    private String data;
 
     public GitHubRepositoryPage open(String login, String repoName){
         Selenide.open("https://github.com/" + login + "/" + repoName);
         return this;
     }
 
-    public void clickFileByName(String name){
+    public void addSomeData(String value){
+        this.data = value;
+    }
+
+    public String getSomeData(){
+        return data;
     }
 
 }

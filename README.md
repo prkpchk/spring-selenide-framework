@@ -19,21 +19,24 @@ The goal of this project is to create a framework for autotests that supports mo
 #### You can run tests simply debugging each one from IDE or using following maven commands:
 - to run XML suite(resources/suites) using suite path(or few separated with ",") in command:
 ```bash
-mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/RegressionSuite.xml
+mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/RegressionSuite.xml -Dspring.profiles.active=chrome
 ```
 
 - to run test class using class name(or few separated with ",") in command:
 
 ```bash
-mvn test -Dtest=SampleTest
+mvn test -Dtest=SampleTest -Dspring.profiles.active=chrome
 ```
 
 - to run one test(or few separated with ",") in command:
 
 ```bash
-mvn test -Dtest=SampleTest#SampleTest2
+mvn test -Dtest=SampleTest#SampleTest2 -Dspring.profiles.active=chrome
 ```
 
+#### Use spring profiles for each run to define which browser/platform will be used in tests. Currently supported browsers/platforms are defined under:
+`spring-selenide-framework/java/base/driver
+`
 ----
 
 ### 2. Allure reports
