@@ -7,8 +7,14 @@ import org.springframework.beans.factory.config.CustomScopeConfigurer;
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.SimpleThreadScope;
 
+/**
+ * Spring Profile annotation used here to define which browser will be started for current test run
+ * Profile can be set in properties spring.profiles.active=chrome
+ * Or when using mvn test command mvn test -Dsurefire.suiteXmlFiles=[suite] -Dspring.profiles.active=chrome
+ */
 @Configuration
 @Profile("chrome")
+@SuppressWarnings("unused")
 public class ChromeConfig {
 
     @Bean

@@ -7,8 +7,14 @@ import org.springframework.beans.factory.config.CustomScopeConfigurer;
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.SimpleThreadScope;
 
+/**
+ * Spring Profile annotation used here to define which browser will be started for current test run
+ * Profile can be set in properties spring.profiles.active=firefox
+ * Or when using mvn test command mvn test -Dsurefire.suiteXmlFiles=[suite] -Dspring.profiles.active=firefox
+ */
 @Configuration
 @Profile("firefox")
+@SuppressWarnings("unused")
 public class FirefoxConfig {
 
     @Bean
