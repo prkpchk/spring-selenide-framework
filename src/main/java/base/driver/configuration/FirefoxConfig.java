@@ -1,17 +1,15 @@
-package base.configuration;
+package base.driver.configuration;
 
+import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.beans.factory.config.CustomScopeConfigurer;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 import org.springframework.context.support.SimpleThreadScope;
 
 @Configuration
-@Profile("chrome")
-public class ChromeConfig {
+@Profile("firefox")
+public class FirefoxConfig {
 
     @Bean
     public CustomScopeConfigurer newCustomScopeConfigurer() {
@@ -24,6 +22,9 @@ public class ChromeConfig {
     @Bean
     @Scope(scopeName = "thread")
     public WebDriver getDriver() {
-        return new ChromeDriver();
+        WebDriver webDriver = new FirefoxDriver();
+        WebDriverRunner.setWebDriver(webDriver);
+        return webDriver;
     }
+
 }

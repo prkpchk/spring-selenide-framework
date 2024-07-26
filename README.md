@@ -19,7 +19,7 @@ The goal of this project is to create a framework for autotests that supports mo
 #### You can run tests simply debugging each one from IDE or using following maven commands:
 - to run XML suite(resources/suites) using suite path(or few separated with ",") in command:
 ```bash
-mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/RegressionSuite.xml -Dspring.profiles.active=chrome
+mvn test -Dsurefire.suiteXmlFiles=src/test/resources/suites/ParallelPageDataSuite.xml -Dspring.profiles.active=chrome
 ```
 
 - to run test class using class name(or few separated with ",") in command:
