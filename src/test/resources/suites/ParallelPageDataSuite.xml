@@ -5,7 +5,7 @@
 
     <test name="Test example">
         <classes>
-            <class name="ui.ParallelPagesTest"/>
+            <class name="demo.paralleltests.ParallelPagesTest"/>
         </classes>
     </test>
 

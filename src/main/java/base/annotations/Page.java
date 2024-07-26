@@ -1,4 +1,4 @@
-package base.pages;
+package base.annotations;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -12,6 +12,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target(TYPE)
 @Retention(RUNTIME)
 @Component
-@Scope("thread")
+@Scope("prototype")
 public @interface Page {
 }

@@ -1,5 +1,7 @@
 package base.pages;
 
+import base.annotations.Page;
+
 @Page
 public class DataPage {
 

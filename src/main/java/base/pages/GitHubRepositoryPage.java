@@ -1,5 +1,6 @@
 package base.pages;
 
+import base.annotations.Page;
 import com.codeborne.selenide.Selenide;
 
 @Page

@@ -1,10 +1,7 @@
 package base;
 
 
-import base.driver.Driver;
-import base.pages.Page;
 import org.jetbrains.annotations.NotNull;
-import org.openqa.selenium.support.PageFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
@@ -18,12 +15,6 @@ public class PageObjectBeanPostProcessor implements BeanPostProcessor, Applicati
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, @NotNull String beanName) throws BeansException {
-        if (bean.getClass().isAnnotationPresent(Page.class)) {
-            Driver driver = applicationContext.getBean(Driver.class);
-            if (driver != null) {
-                PageFactory.initElements(driver.getWebDriver(), bean);
-            }
-        }
         return bean;
     }
 
